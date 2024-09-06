@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout GitHub Repo') {
             steps {
-                git 'https://github.com/noaalinux/docker-lab.git' // Clone the GitHub repository
+                git 'https://github.com/Noah-linux/DOCKER.git' // Clone the GitHub repository
             }
         }
 
