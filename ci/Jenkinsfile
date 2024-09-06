@@ -64,14 +64,7 @@ pipeline {
             }
         }
 
-        always {
-            slackSend (
-                channel: params.SlackChannel, // Use the parameterized Slack channel
-                color: 'good', // or 'danger' based on the build status
-                tokenCredentialId: params.SlackTokenCredentialId, // Use the parameterized Slack token
-                message: "Pipeline Status: ${currentBuild.currentResult} - ${env.JOB_NAME} #${env.BUILD_NUMBER} - ${BUILD_URL}"
-            )
-        }
+      
 
         cleanup {
             cleanWs() // Clean up workspace
